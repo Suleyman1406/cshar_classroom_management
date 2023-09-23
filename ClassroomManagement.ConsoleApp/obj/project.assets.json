@@ -1,0 +1,130 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "ClassroomManagement.Business/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "ClassroomManagement.Core": "1.0.0",
+          "DataAccess": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ClassroomManagement.Business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ClassroomManagement.Business.dll": {}
+        }
+      },
+      "ClassroomManagement.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/ClassroomManagement.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ClassroomManagement.Core.dll": {}
+        }
+      },
+      "DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "ClassroomManagement.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataAccess.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ClassroomManagement.Business/1.0.0": {
+      "type": "project",
+      "path": "../ClassroomManagement.Business/ClassroomManagement.Business.csproj",
+      "msbuildProject": "../ClassroomManagement.Business/ClassroomManagement.Business.csproj"
+    },
+    "ClassroomManagement.Core/1.0.0": {
+      "type": "project",
+      "path": "../ClassroomManagement.Core/ClassroomManagement.Core.csproj",
+      "msbuildProject": "../ClassroomManagement.Core/ClassroomManagement.Core.csproj"
+    },
+    "DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../DataAccess/DataAccess.csproj",
+      "msbuildProject": "../DataAccess/DataAccess.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "ClassroomManagement.Business >= 1.0.0",
+      "ClassroomManagement.Core >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/dadashow/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/dadashow/Projects/ClassroomManagement/ClassroomManagement.ConsoleApp/ClassroomManagement.ConsoleApp.csproj",
+      "projectName": "ClassroomManagement.ConsoleApp",
+      "projectPath": "/Users/dadashow/Projects/ClassroomManagement/ClassroomManagement.ConsoleApp/ClassroomManagement.ConsoleApp.csproj",
+      "packagesPath": "/Users/dadashow/.nuget/packages/",
+      "outputPath": "/Users/dadashow/Projects/ClassroomManagement/ClassroomManagement.ConsoleApp/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/dadashow/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {
+            "/Users/dadashow/Projects/ClassroomManagement/ClassroomManagement.Business/ClassroomManagement.Business.csproj": {
+              "projectPath": "/Users/dadashow/Projects/ClassroomManagement/ClassroomManagement.Business/ClassroomManagement.Business.csproj"
+            },
+            "/Users/dadashow/Projects/ClassroomManagement/ClassroomManagement.Core/ClassroomManagement.Core.csproj": {
+              "projectPath": "/Users/dadashow/Projects/ClassroomManagement/ClassroomManagement.Core/ClassroomManagement.Core.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.307/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

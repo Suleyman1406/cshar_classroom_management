@@ -15,6 +15,11 @@ namespace ClassroomManagement.Core.Models
             Age = age;
 			Id = count++;
         }
+
+		public void PrintInfo()
+		{
+            Console.WriteLine($"ID: {Id}, Name: {Name}, Age: {Age}");
+        }
 	}
 }
 

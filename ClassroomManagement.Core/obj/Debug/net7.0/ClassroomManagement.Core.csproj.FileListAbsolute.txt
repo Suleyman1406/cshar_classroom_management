@@ -1,0 +1,12 @@
+/Users/dadashow/Projects/ClassroomManagement/ClassroomManagement.Core/bin/Debug/net7.0/ClassroomManagement.Core.deps.json
+/Users/dadashow/Projects/ClassroomManagement/ClassroomManagement.Core/bin/Debug/net7.0/ClassroomManagement.Core.dll
+/Users/dadashow/Projects/ClassroomManagement/ClassroomManagement.Core/bin/Debug/net7.0/ClassroomManagement.Core.pdb
+/Users/dadashow/Projects/ClassroomManagement/ClassroomManagement.Core/obj/Debug/net7.0/ClassroomManagement.Core.csproj.AssemblyReference.cache
+/Users/dadashow/Projects/ClassroomManagement/ClassroomManagement.Core/obj/Debug/net7.0/ClassroomManagement.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dadashow/Projects/ClassroomManagement/ClassroomManagement.Core/obj/Debug/net7.0/ClassroomManagement.Core.AssemblyInfoInputs.cache
+/Users/dadashow/Projects/ClassroomManagement/ClassroomManagement.Core/obj/Debug/net7.0/ClassroomManagement.Core.AssemblyInfo.cs
+/Users/dadashow/Projects/ClassroomManagement/ClassroomManagement.Core/obj/Debug/net7.0/ClassroomManagement.Core.csproj.CoreCompileInputs.cache
+/Users/dadashow/Projects/ClassroomManagement/ClassroomManagement.Core/obj/Debug/net7.0/ClassroomManagement.Core.dll
+/Users/dadashow/Projects/ClassroomManagement/ClassroomManagement.Core/obj/Debug/net7.0/refint/ClassroomManagement.Core.dll
+/Users/dadashow/Projects/ClassroomManagement/ClassroomManagement.Core/obj/Debug/net7.0/ClassroomManagement.Core.pdb
+/Users/dadashow/Projects/ClassroomManagement/ClassroomManagement.Core/obj/Debug/net7.0/ref/ClassroomManagement.Core.dll

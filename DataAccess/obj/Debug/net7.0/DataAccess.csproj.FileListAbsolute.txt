@@ -1,0 +1,15 @@
+/Users/dadashow/Projects/ClassroomManagement/DataAccess/bin/Debug/net7.0/DataAccess.deps.json
+/Users/dadashow/Projects/ClassroomManagement/DataAccess/bin/Debug/net7.0/DataAccess.dll
+/Users/dadashow/Projects/ClassroomManagement/DataAccess/bin/Debug/net7.0/DataAccess.pdb
+/Users/dadashow/Projects/ClassroomManagement/DataAccess/bin/Debug/net7.0/ClassroomManagement.Core.dll
+/Users/dadashow/Projects/ClassroomManagement/DataAccess/bin/Debug/net7.0/ClassroomManagement.Core.pdb
+/Users/dadashow/Projects/ClassroomManagement/DataAccess/obj/Debug/net7.0/DataAccess.csproj.AssemblyReference.cache
+/Users/dadashow/Projects/ClassroomManagement/DataAccess/obj/Debug/net7.0/DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dadashow/Projects/ClassroomManagement/DataAccess/obj/Debug/net7.0/DataAccess.AssemblyInfoInputs.cache
+/Users/dadashow/Projects/ClassroomManagement/DataAccess/obj/Debug/net7.0/DataAccess.AssemblyInfo.cs
+/Users/dadashow/Projects/ClassroomManagement/DataAccess/obj/Debug/net7.0/DataAccess.csproj.CoreCompileInputs.cache
+/Users/dadashow/Projects/ClassroomManagement/DataAccess/obj/Debug/net7.0/DataAccess.csproj.CopyComplete
+/Users/dadashow/Projects/ClassroomManagement/DataAccess/obj/Debug/net7.0/DataAccess.dll
+/Users/dadashow/Projects/ClassroomManagement/DataAccess/obj/Debug/net7.0/refint/DataAccess.dll
+/Users/dadashow/Projects/ClassroomManagement/DataAccess/obj/Debug/net7.0/DataAccess.pdb
+/Users/dadashow/Projects/ClassroomManagement/DataAccess/obj/Debug/net7.0/ref/DataAccess.dll

@@ -1,4 +1,5 @@
-﻿<Properties>
-  <MonoDevelop.Ide.ItemProperties.ClassroomManagement.Core FirstBuild="True" />
+﻿<Properties StartupConfiguration="{12B846E9-2A30-4C0F-AC7B-3076C276F37C}|Default">
+  <MonoDevelop.Ide.ItemProperties.ClassroomManagement.ConsoleApp PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.DataAccess FirstBuild="True" />
   <MultiItemStartupConfigurations />
 </Properties>
