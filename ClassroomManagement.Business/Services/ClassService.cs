@@ -1,4 +1,4 @@
-﻿using System;
+﻿using ClassroomManagement.Core.Exceptions;
 using ClassroomManagement.Core.Models;
 using DataAccess.Context;
 
@@ -17,13 +17,17 @@ namespace ClassroomManagement.Business.Services
 
             AppDbContext<Class>.datas.Add(classroom);
         }
+        public void Edit()
+        {
+            Class chosenClass = ChooseClass();
+          
+        }
 
         public void ShowClasses()
         {
             if (AppDbContext<Class>.datas.Count == 0)
             {
-                Console.WriteLine("Her hansi bir class tapilmadi.");
-                return;
+                throw new ClassNotFoundException("There is no class!");
             }
             Console.WriteLine("Classlar: ");
 
@@ -35,12 +39,7 @@ namespace ClassroomManagement.Business.Services
 
         public void AddStudentToClass(Student student)
         {
-            Class? chosenClass = ChooseClass();
-            if(chosenClass is null)
-            {
-                Console.WriteLine("Class Tapilmadi");
-                return;
-            }
+            Class chosenClass = ChooseClass();
 
             if (chosenClass.students.Contains(student))
             {
@@ -52,29 +51,26 @@ namespace ClassroomManagement.Business.Services
             Console.WriteLine("Telebe classa elave edildi");
         }
 
-        public Class? ChooseClass()
+        public Class ChooseClass()
         {
-            if (AppDbContext<Class>.datas.Count == 0)
-            {
-                return null;
-            }
             ShowClasses();
             Console.Write("Secmek istediyiniz classin id'ni girin: ");
             int chosenClassId = int.Parse(Console.ReadLine());
+            Class? chosenClass = AppDbContext<Class>.datas.FirstOrDefault((classroom) => classroom.Id == chosenClassId);
 
-            return AppDbContext<Class>.datas.FirstOrDefault((classroom) => classroom.Id == chosenClassId);
+            if(chosenClass is null)
+            {
+                throw new ClassNotFoundException($"Class not found with id {chosenClassId}");
+            }
+
+            return chosenClass;
 
         }
 
         public void ShowStudents()
         {
-            Class? chosenClass = ChooseClass();
-            if (chosenClass is null)
-            {
-                Console.WriteLine("Class Tapilmadi");
-                return;
-            }
-
+            Class chosenClass = ChooseClass();
+         
             if(chosenClass.students.Count == 0)
             {
                 Console.WriteLine("Classroomda telebe yoxdur");

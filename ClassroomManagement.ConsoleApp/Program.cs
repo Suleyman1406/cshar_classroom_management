@@ -1,5 +1,6 @@
 ﻿using ClassroomManagement.Business.Helpers.Extensions;
 using ClassroomManagement.Business.Services;
+using ClassroomManagement.Core.Exceptions;
 using ClassroomManagement.Core.Enums;
 using ClassroomManagement.Core.Models;
 
@@ -20,6 +21,8 @@ while (isContinue)
 
     int.TryParse(Console.ReadLine(), out choice);
 
+    
+
     switch (choice)
     {
         case (int)ConsoleOperations.STUDENT:
@@ -36,32 +39,38 @@ while (isContinue)
 
             int.TryParse(Console.ReadLine(), out studentOperationChoice);
 
-            switch (studentOperationChoice)
+            try
             {
-                case (int)StudentOperations.ADD:
-                    studentService.Add();
-                    goto StudentOperationsLabel;
-                case (int)StudentOperations.PRINT:
-                    goto StudentOperationsLabel;
-                case (int)StudentOperations.UPDATE:
-                    studentService.EditStudent();
-                    goto StudentOperationsLabel;
-                case (int)StudentOperations.SHOW_CLASSES:
-                    studentService.ShowStudentClasses();
-                    goto StudentOperationsLabel;
-                case (int)StudentOperations.SHOW_STUDENTS:
-                    studentService.ShowStudents();
-                    goto StudentOperationsLabel;
-                case (int)StudentOperations.DELETE:
-                    studentService.Delete();
-                    goto StudentOperationsLabel;
-                case (int) StudentOperations.BACK:
-                    break;
-                default:
-                    Console.WriteLine("Dogru girin");
-                    goto StudentOperationsLabel;
+                switch (studentOperationChoice)
+                {
+                    case (int)StudentOperations.ADD:
+                        studentService.Add();
+                        goto StudentOperationsLabel;
+                    case (int)StudentOperations.PRINT:
+                        goto StudentOperationsLabel;
+                    case (int)StudentOperations.UPDATE:
+                        studentService.EditStudent();
+                        goto StudentOperationsLabel;
+                    case (int)StudentOperations.SHOW_CLASSES:
+                        studentService.ShowStudentClasses();
+                        goto StudentOperationsLabel;
+                    case (int)StudentOperations.SHOW_STUDENTS:
+                        studentService.ShowStudents();
+                        goto StudentOperationsLabel;
+                    case (int)StudentOperations.DELETE:
+                        studentService.Delete();
+                        goto StudentOperationsLabel;
+                    case (int)StudentOperations.BACK:
+                        break;
+                    default:
+                        Console.WriteLine("Dogru girin");
+                        goto StudentOperationsLabel;
+                }
+            }catch(StudentNotFoundException e)
+            {
+                Console.WriteLine(e.Message);
+                goto StudentOperationsLabel;
             }
-
             break;
         case (int)ConsoleOperations.CLASS:
 
@@ -80,37 +89,52 @@ while (isContinue)
 
             int.TryParse(Console.ReadLine(), out classOperationChoice);
 
-            switch (classOperationChoice)
+
+            try
             {
-                case (int)ClassOperations.ADD:
-                    classService.Add();
-                    goto ClassOperationsLabel;
-                case (int)ClassOperations.PRINT:
-                    goto ClassOperationsLabel;
-                case (int)ClassOperations.UPDATE:
-                    goto ClassOperationsLabel;
-                case (int)ClassOperations.ADD_STUDENT:
-                    Student? student= studentService.ChooseStudent();
-                    if(student is null)
-                    {
-                        Console.WriteLine("Telebe tapilmadi!");
+                switch (classOperationChoice)
+                {
+                    case (int)ClassOperations.ADD:
+                        classService.Add();
                         goto ClassOperationsLabel;
-                    }
-                    classService.AddStudentToClass(student);
-                    goto ClassOperationsLabel;
-                case (int)ClassOperations.SHOW_STUDENTS:
-                    classService.ShowStudents();
-                    goto ClassOperationsLabel;
-                case (int)ClassOperations.SHOW_CLASSES:
-                    classService.ShowClasses();
-                    goto ClassOperationsLabel;
-                case (int)ClassOperations.BACK:
-                    break;
-                case (int)ClassOperations.DELETE:
-                    goto ClassOperationsLabel;
-                default:
-                    Console.WriteLine("Dogru girin");
-                    goto ClassOperationsLabel;
+                    case (int)ClassOperations.PRINT:
+                        goto ClassOperationsLabel;
+                    case (int)ClassOperations.UPDATE:
+                        classService.Edit();
+                        goto ClassOperationsLabel;
+                    case (int)ClassOperations.ADD_STUDENT:
+                        Student? student = studentService.ChooseStudent();
+                        if (student is null)
+                        {
+                            Console.WriteLine("Telebe tapilmadi!");
+                            goto ClassOperationsLabel;
+                        }
+                        classService.AddStudentToClass(student);
+                        goto ClassOperationsLabel;
+                    case (int)ClassOperations.SHOW_STUDENTS:
+                        classService.ShowStudents();
+                        goto ClassOperationsLabel;
+                    case (int)ClassOperations.SHOW_CLASSES:
+                        classService.ShowClasses();
+                        goto ClassOperationsLabel;
+                    case (int)ClassOperations.BACK:
+                        break;
+                    case (int)ClassOperations.DELETE:
+                        goto ClassOperationsLabel;
+                    default:
+                        Console.WriteLine("Dogru girin");
+                        goto ClassOperationsLabel;
+                }
+            }
+            catch (ClassNotFoundException ex)
+            {
+                Console.WriteLine(ex.Message);
+                goto ClassOperationsLabel;
+            }
+            catch(StudentNotFoundException ex)
+            {
+                Console.WriteLine(ex.Message);
+                goto ClassOperationsLabel;
             }
             break;
         case (int)ConsoleOperations.EXIT:

@@ -1,25 +1,19 @@
 ﻿<Properties StartupConfiguration="{12B846E9-2A30-4C0F-AC7B-3076C276F37C}|Default">
-  <MonoDevelop.Ide.ItemProperties.ClassroomManagement.ConsoleApp PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ClassroomManagement.Business/Services/ClassService.cs">
-    <Files>
-      <File FileName="ClassroomManagement.ConsoleApp/Program.cs" />
-      <File FileName="ClassroomManagement.Business/Helpers/Extensions/ConsoleExtension.cs" />
-      <File FileName="ClassroomManagement.Business/Services/ClassService.cs" Line="36" Column="55" />
-      <File FileName="ClassroomManagement.Core/Enums/Operations.cs" />
-      <File FileName="ClassroomManagement.Business/Services/StudentService.cs" />
-    </Files>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.ClassroomManagement.ConsoleApp PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ClassroomManagement" expanded="True">
+          <Node name="ClassroomManagement">
             <Node name="ClassroomManagement.Business" expanded="True">
               <Node name="Helpers" expanded="True">
-                <Node name="Extensions" expanded="True" />
+                <Node name="Extensions" expanded="True">
+                  <Node name="ConsoleExtension.cs" selected="True" />
+                </Node>
               </Node>
-              <Node name="Services" expanded="True">
-                <Node name="ClassService.cs" selected="True" />
-              </Node>
+              <Node name="Services" expanded="True" />
             </Node>
             <Node name="ClassroomManagement.ConsoleApp" expanded="True" />
             <Node name="ClassroomManagement.Core" expanded="True">
@@ -27,17 +21,13 @@
               <Node name="Enums" expanded="True" />
               <Node name="Models" expanded="True" />
             </Node>
-            <Node name="DataAccess" expanded="True">
-              <Node name="Context" expanded="True" />
-            </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

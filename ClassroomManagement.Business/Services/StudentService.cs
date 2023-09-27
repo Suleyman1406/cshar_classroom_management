@@ -1,4 +1,5 @@
 ﻿using System;
+using ClassroomManagement.Core.Exceptions;
 using ClassroomManagement.Core.Models;
 using DataAccess.Context;
 
@@ -25,8 +26,7 @@ namespace ClassroomManagement.Business.Services
 		{
 			if(AppDbContext<Student>.datas.Count == 0)
 			{
-				Console.WriteLine("Her hansi bir student tapilmadi.");
-				return;
+				throw new StudentNotFoundException("There is no student!");
 			}
 			Console.WriteLine("Telebeler: ");
 
@@ -39,20 +39,8 @@ namespace ClassroomManagement.Business.Services
 		public void EditStudent()
 		{
 
-			if (AppDbContext<Student>.datas.Count == 0)
-			{
-				Console.WriteLine("Student tapilmadi. ");
-				return;
-			}
-
-
-			Student? chosenStudent = ChooseStudent();
-			if(chosenStudent is null)
-			{
-				Console.WriteLine("Telebe tapilmadi! ");
-				return;
-			}
-
+			Student chosenStudent = ChooseStudent();
+		
 			Console.WriteLine("\nTapilan user bilgisi:");
 			chosenStudent.PrintInfo();
 
@@ -68,33 +56,25 @@ namespace ClassroomManagement.Business.Services
 
         }
 
-		public Student? ChooseStudent()
+		public Student ChooseStudent()
 		{
-            if (AppDbContext<Student>.datas.Count == 0)
-            {
-                return null;
-            }
-
             ShowStudents();
 			Console.Write("Secmek istediyiniz studentin id'ni girin: ");
 			int chosenStudentId = int.Parse(Console.ReadLine());
 
-			return AppDbContext<Student>.datas.FirstOrDefault((student) => student.Id == chosenStudentId);
+			Student? student = AppDbContext<Student>.datas.FirstOrDefault((student) => student.Id == chosenStudentId);
+
+			if(student is null)
+			{
+				throw new StudentNotFoundException($"Student not found with id {chosenStudentId}");
+			}
+
+            return student;
 		}
 
 		public void ShowStudentClasses()
 		{
-            if (AppDbContext<Student>.datas.Count == 0)
-            {
-                Console.WriteLine("Telebe tapilmadi. ");
-                return;
-            }
-            Student? s1 = ChooseStudent();
-            if (s1 is null)
-            {
-                Console.WriteLine("Telebe tapilmadi! ");
-                return;
-            }
+            Student s1 = ChooseStudent();
 
 			List<Class> studentClasses = AppDbContext<Class>.datas.FindAll((classroom) => classroom.students.Contains(s1));
 
@@ -116,18 +96,7 @@ namespace ClassroomManagement.Business.Services
 
 		public void Delete()
 		{
-            if (AppDbContext<Student>.datas.Count == 0)
-            {
-                Console.WriteLine("Telebe tapilmadi. ");
-                return;
-            }
-            Student? chosenStudent = ChooseStudent();
-            if (chosenStudent is null)
-            {
-                Console.WriteLine("Telebe tapilmadi! ");
-                return;
-            }
-
+            Student chosenStudent = ChooseStudent();
 			AppDbContext<Student>.datas.Remove(chosenStudent);
         }
 
