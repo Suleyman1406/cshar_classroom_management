@@ -1,24 +1,18 @@
 ﻿<Properties StartupConfiguration="{12B846E9-2A30-4C0F-AC7B-3076C276F37C}|Default">
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.ClassroomManagement.ConsoleApp PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ClassroomManagement">
-            <Node name="ClassroomManagement.Business" expanded="True">
-              <Node name="Helpers" expanded="True">
-                <Node name="Extensions" expanded="True">
-                  <Node name="ConsoleExtension.cs" selected="True" />
-                </Node>
-              </Node>
-              <Node name="Services" expanded="True" />
-            </Node>
-            <Node name="ClassroomManagement.ConsoleApp" expanded="True" />
             <Node name="ClassroomManagement.Core" expanded="True">
-              <Node name="Common" expanded="True" />
               <Node name="Enums" expanded="True" />
+              <Node name="Exceptions" expanded="True">
+                <Node name="ClassNotFoundException.cs" selected="True" />
+              </Node>
               <Node name="Models" expanded="True" />
             </Node>
           </Node>
@@ -29,5 +23,4 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

@@ -103,12 +103,7 @@ while (isContinue)
                         classService.Edit();
                         goto ClassOperationsLabel;
                     case (int)ClassOperations.ADD_STUDENT:
-                        Student? student = studentService.ChooseStudent();
-                        if (student is null)
-                        {
-                            Console.WriteLine("Telebe tapilmadi!");
-                            goto ClassOperationsLabel;
-                        }
+                        Student student = studentService.ChooseStudent();
                         classService.AddStudentToClass(student);
                         goto ClassOperationsLabel;
                     case (int)ClassOperations.SHOW_STUDENTS:
